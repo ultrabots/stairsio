@@ -250,3 +250,13 @@ stairsio.register_stairsio("obsidianbrick", "default:obsidianbrick",
 		"Obsidian Brick Inner Corner",
 		"Obsidian Brick Outer Corner",
 		default.node_sound_stone_defaults())
+
+-- add support for mods; quartz
+if( minetest.registered_nodes["quartz:block" ]) then
+    stairsio.register_stairsio("quartzblock", "quartz:block",
+		{cracky=3, oddly_breakable_by_hand=1},
+		{"quartz_block.png"},
+		"Quartz Inner Corner",
+		"Quartz Outer Corner",
+		default.node_sound_glass_defaults())
+end
